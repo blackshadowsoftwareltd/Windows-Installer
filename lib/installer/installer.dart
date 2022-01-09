@@ -62,16 +62,23 @@ class _InstallerScreenState extends State<InstallerScreen> {
                   }
                   return showDialog(
                       context: context,
-                      builder: (context) => const Dialog(
-                              child: Padding(
-                            padding: EdgeInsets.all(30),
-                            child: Text('Installation completed',
-                                style: TextStyle(fontSize: 25)),
-                          ))).then((value) async => Future.delayed(
-                      const Duration(seconds: 3),
-                      () => Navigator.pop(context)));
+                      builder: (context) {
+                        return const Dialog(
+                            child: Padding(
+                          padding: EdgeInsets.all(30),
+                          child: Text('Installation completed',
+                              style: TextStyle(fontSize: 25)),
+                        ));
+                      }).then((value) async => Future.delayed(
+                          const Duration(seconds: 3),
+                          () => Navigator.pop(context))
+                      .then((value) async =>
+                          await Future.delayed(const Duration(seconds: 2), () {
+                            SystemNavigator.pop();
+                            exit(0);
+                          })));
                 }));
-            await Future.delayed(const Duration(seconds: 5), () {
+            await Future.delayed(const Duration(seconds: 10), () {
               SystemNavigator.pop();
               exit(0);
             });
@@ -79,13 +86,11 @@ class _InstallerScreenState extends State<InstallerScreen> {
           backgroundColor: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          label: const Text(
-            'Install',
-            style: TextStyle(
-                color: Colors.black87,
-                fontWeight: FontWeight.bold,
-                fontSize: 20),
-          )),
+          label: const Text('Install',
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
