@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="windows_installer">
    <application
-        android:label="ag_installer"
+        android:label="windows_installer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

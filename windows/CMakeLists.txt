@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(ag_installer LANGUAGES CXX)
+project(windows_installer LANGUAGES CXX)
 
-set(BINARY_NAME "ag_installer")
+set(BINARY_NAME "windows_installer")
 
 cmake_policy(SET CMP0063 NEW)
 

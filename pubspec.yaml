@@ -1,4 +1,4 @@
-name: ag_installer
+name: windows_installer
 description: A new Flutter project.
   
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

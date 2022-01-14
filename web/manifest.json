@@ -1,6 +1,6 @@
 {
-    "name": "ag_installer",
-    "short_name": "ag_installer",
+    "name": "windows_installer",
+    "short_name": "windows_installer",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
