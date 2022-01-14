@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
-
 import 'installer/installer.dart';
 
 Future<void> main() async {

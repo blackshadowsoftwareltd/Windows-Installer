@@ -7,7 +7,7 @@
 ### Windows Screenshots
 
  <div class="row"> 
-   <img src="screenShots/m1.png" alt="Screenshot 1" width="520" height="400"> 
+   <img src="screenShots/m1.png" alt="Screenshot 1" width="600" height="400"> 
  </div> 
  
  
